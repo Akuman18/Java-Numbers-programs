@@ -1,0 +1,385 @@
+package com.company;
+import java.util.*;
+
+public class Main {
+    public static void main(String args[])throws Exception {
+        Scanner input = new Scanner(System.in);
+        System.out.println("enter the  any one");
+        System.out.println("1.Number programming \n 2.Pattern programming \n 3.Swiggy \n 4.Exit ");
+        int select = input.nextInt();
+        switch (select) {
+            case 1:
+                System.out.println("your select Number programming");
+                System.out.println("1.prime number \n 2.factorial \n 3.Evennumber \n 4.Palindrome \n 5.Armstongnumber");
+                int number = input.nextInt();
+                switch (number) {
+                    case 1:
+                        System.out.println("Welcome to prime number");
+                        int n, c = 0;
+                        System.out.println("enter n");
+                        n = input.nextInt();
+                        for (int i = 1; i <= n; i++) {
+                            if (n % i == 0) {
+                                c = c + 1;
+                            }
+                            if (c == 2)
+                                System.out.println("prime number");
+                            else
+                                System.out.println("not prime number");
+                        }
+                        break;
+                    case 2:
+                        System.out.println("Welcome to factorial number");
+                        int a, f = 1;
+                        System.out.println("enter a number");
+                        a = input.nextInt();
+                        for (int i = 1; i <= a; i++) {
+                            f = i * f;
+                        }
+                        System.out.println(f);
+                        break;
+
+                    case 3:
+                        System.out.println("Welcome to Evennumber number");
+                        System.out.println("enter a number");
+                        int b = input.nextInt();
+                        if (b % 2 == 0)
+                            System.out.println("Even number");
+                        else
+                            System.out.println("Not even number");
+                        break;
+
+                    case 4:
+                        System.out.println("Welcome to Palindrome number");
+                        int d, r, m, s = 0;
+                        System.out.println("enter a number");
+                        d = input.nextInt();
+                        m = d;
+                        while (d != 0) {
+                            r = d % 10;
+                            s = s * 10 + r;
+                            d = d / 10;
+                        }
+                        if (m == s)
+                            System.out.println("Palindrome");
+                        else
+                            System.out.println("Not Palindrome");
+                        break;
+                    case 5:
+                        System.out.println("Welcome to Armstongnumber number");
+                        int e = 0, g, h, i = 0;
+                        g = e;
+                        System.out.println("enter a number ");
+                        e = input.nextInt();
+                        while (e != 0) {
+                            h = e % 10;
+                            i = i + h * h * h;
+                            e = e / 10;
+                        }
+                        if (g == i)
+                            System.out.println("Armstrong Number");
+                        else
+                            System.out.println("Not Armstrong Number");
+                }
+                break;
+
+            case 2:
+                System.out.println("your select Number programming");
+                System.out.println("1.Star pattern \n 2.Number pattern \n 3.Alpha pattern \n 4.pymind pattern");
+                int number1 = input.nextInt();
+                switch (number1){
+
+                    case 1:
+                        System.out.println("your choosing star pattern");
+                        for (int i=0;i<5;i++){
+                            for (int j=0;j<5;j++){
+                                System.out.print("* ");
+                            }
+                            System.out.println();
+                        }
+                        break;
+                    case 2:
+                        System.out.println("your choosing Number pattern");
+                        for (int i=0;i<=4;i++){
+                            for (int j=0;j<5;j++){
+                                System.out.print(i+" ");
+                            }
+                            System.out.println();
+                        }
+                   break;
+                    case 3:
+                        System.out.println("your choosing alpha Pattern");
+                    for (char ch1='A';ch1<='E';ch1++){
+                        for (int i=0;i<5;i++){
+                            System.out.print(ch1+" ");
+                        }
+                        System.out.println();
+                    }
+                    break;
+                    case 4:
+                        System.out.println("your choosing pyrmind pattern");
+                        int n=9;
+                        for (int i=0;i<n;i++){
+                            for (int j=0;j<n;j++){
+                                if (i+j>=n-1&&i>=j)
+                                    System.out.print("* ");
+                                else
+                                    System.out.print(" ");
+                            }
+                            System.out.println();
+                        }
+                  break;
+
+                }
+            case 3:
+                System.out.println("your select Swiggy programming");
+                System.out.println("Welcome to dwiggy \t Are you hungery...\n");
+                System.out.println("Enter your Hotel ");
+                System.out.println("1.Taj Hotel\n2.S.S Hydrabed\n3.Buhari\n4.A2B");
+                int hotelnum=input.nextInt();
+
+                switch (hotelnum){
+                    case 1:{
+                        System.out.println("Thanks you for selecting Taj Hotel");
+                        System.out.println("Enter your dish");
+                        System.out.println("1.Chicken biriyani\n2.Mutton Biriyani\n3.Rabbit Biriyani\n4.Prawn Biriyani");
+                        int dishnumber=input.nextInt();
+
+                        switch (dishnumber){
+                            case 1:{
+                                System.out.println("you ordered chicken biriyani");
+                                break;
+                            }
+                            case 2:{
+                                System.out.println("you ordered Mutton biriyani");
+                                break;
+                            }
+                            case 3:{
+                                System.out.println("you ordered Rabbit biriyani");
+                                break;
+                            }
+                            case 4:{
+                                System.out.println("you ordered prawn biriyani");
+                                break;
+                            }
+                            default:{
+                                System.out.println("Please enter correct dishnumber");
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                    case 2:{
+                        System.out.println("Thanks you for selecting S.S Hydrabed");
+                        System.out.println("Enter your dish");
+                        System.out.println("1.Chicken biriyani\n2.Mutton Biriyani\n3.Rabbit Biriyani\n4.Prawn Biriyani");
+                        int dishnumber=input.nextInt();
+                        switch (dishnumber){
+                            case 1:{
+                                System.out.println("you ordered chicken biriyani");
+                                break;
+                            }
+                            case 2:{
+                                System.out.println("you ordered Mutton biriyani");
+                                break;
+                            }
+                            case 3:{
+                                System.out.println("you ordered Rabbit biriyani");
+                                break;
+                            }
+                            case 4:{
+                                System.out.println("you ordered prawn biriyani");
+                                break;
+                            }
+                            default:{
+                                System.out.println("Please enter correct dishnumber");
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                    case 3:{
+                        System.out.println("Thanks you for selecting Buhari");
+                        System.out.println("Enter your dish");
+                        System.out.println("1.Chicken biriyani\n2.Mutton Biriyani\n3.Rabbit Biriyani\n4.Prawn Biriyani");
+                        int dishnumber=input.nextInt();
+                        switch (dishnumber){
+                            case 1:{
+                                System.out.println("you ordered chicken biriyani");
+                                break;
+                            }
+                            case 2:{
+                                System.out.println("you ordered Mutton biriyani");
+                                break;
+                            }
+                            case 3:{
+                                System.out.println("you ordered Rabbit biriyani");
+                                break;
+                            }
+                            case 4:{
+                                System.out.println("you ordered prawn biriyani");
+                                break;
+                            }
+                            default:{
+                                System.out.println("Please enter correct dishnumber");
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                    case 4:{
+                        System.out.println("Thanks you for selecting A2B");
+                        System.out.println("Enter your dish");
+                        System.out.println("1.Chicken biriyani\n2.Mutton Biriyani\n3.Rabbit Biriyani\n4.Prawn Biriyani");
+                        System.out.println("please enter");
+                        int dishnumber=input.nextInt();
+
+                        switch (dishnumber){
+                            case 1:{
+                                System.out.println("you ordered chicken biriyani");
+                                break;
+                            }
+                            case 2:{
+                                System.out.println("you ordered Mutton biriyani");
+                                break;
+                            }
+                            case 3:{
+                                System.out.println("you ordered Rabbit biriyani");
+                                break;
+                            }
+                            case 4:{
+                                System.out.println("you ordered prawn biriyani");
+                                break;
+                            }
+                            default:{
+                                System.out.println("Please enter correct dishnumber");
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                }
+
+                System.out.println("Enter the Quantity");
+                int quantity=input.nextInt();
+
+                int per_plate=120;
+
+                double bill=quantity*per_plate;
+
+                System.out.println("your total amount bill:"+bill);
+                Thread.sleep(3000);
+
+                System.out.println("select your payment mood");
+                Thread.sleep(2000);
+                System.out.println("1.Google-pay\n2.Phone-pay");
+                int payment=input.nextInt();
+
+                System.out.println("enter you bill amount");
+                double amount=input.nextDouble();
+                if (bill==amount){
+                    System.out.println("wait for otp");
+                    Thread.sleep(3000);
+                    double ot=9999*Math.random()+9999;
+                    int otp=(int) ot;
+                    System.out.println(otp);
+                    int user_otp=input.nextInt();
+                    if (otp==user_otp){
+                        System.out.println("verification successfully");
+                        System.out.println("thanks for ordering");
+                        System.out.println("you ordered within 10mins");
+                    }
+                    else {
+                        System.out.println("incorrect OTP");
+                    }
+                }
+                else {
+                    System.out.println("please enter correct amount");
+                }
+              break;
+            case 4:
+                System.out.println("Your exit from this page");
+                System.out.println("Thank you");
+           break;
+            default:
+                System.out.println("please enter the correct number");
+                break;
+        }
+
+    }
+}
+
+
+O/P:
+enter the  any one
+1.Number programming 
+ 2.Pattern programming 
+ 3.Swiggy 
+ 4.Exit 
+3
+your select Swiggy programming
+Welcome to dwiggy 	 Are you hungery...
+
+Enter your Hotel 
+1.Taj Hotel
+2.S.S Hydrabed
+3.Buhari
+4.A2B
+3
+Thanks you for selecting Buhari
+Enter your dish
+1.Chicken biriyani
+2.Mutton Biriyani
+3.Rabbit Biriyani
+4.Prawn Biriyani
+4
+you ordered prawn biriyani
+Enter the Quantity
+5
+your total amount bill:600.0
+select your payment mood
+1.Google-pay
+2.Phone-pay
+2
+enter you bill amount
+600
+wait for otp
+
+14289
+14289
+verification successfully
+thanks for ordering
+you ordered within 10mins
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
